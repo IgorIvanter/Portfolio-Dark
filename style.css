@@ -19,11 +19,11 @@
 
     /* Font sizes */
 
-    --paragraph-font-size: 19px;
-    --heading-font-size: 60px;
-    --page-title-font-size: 30px;
-    --menu-font-size: 16px;
-    --footer-font-size: 16px;
+    --paragraph-font-size: 3vh;
+    --heading-font-size: 6vh;
+    --page-title-font-size: 4vh;
+    --menu-font-size: 3vh;
+    --footer-font-size: 3vh;
 
     /* Font weights */
 
@@ -178,7 +178,7 @@ p {
     display: none;
 }
 
-@media (max-width: 650px) {
+@media (max-width: 1100px) {
     .menu {
         display: none;
     }
@@ -268,7 +268,7 @@ p {
 .heading {
     margin: 30px;
     margin-top: 92px;
-    font-size: 60px;
+    font-size: var(--heading-font-size);
     font-family: var(--heading-font);
 }
 
@@ -285,7 +285,7 @@ p {
 
 footer {
     border: var(--border-width) solid var(--border-color);
-    position: fixed;
+    position: absolute;
     width: 100%;
     bottom: 0;
     text-align: center;
