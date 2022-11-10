@@ -5,7 +5,7 @@
 
 :root {
     /* Set to none zero to see all borders */
-    --border-width: 1px;
+    --border-width: 0px;
     --border-color: violet;
 
     /* Fonts */
@@ -19,7 +19,7 @@
 
     /* Font sizes */
 
-    --paragraph-font-size: 5.5vh;
+    --paragraph-font-size: 4vh;
     --heading-font-size: 4vh;
     --page-title-font-size: 4vh;
     --menu-font-size: 3vh;
@@ -53,7 +53,7 @@
 
     /* The maximum width after which main stops stretching */
 
-    --main-max-width: 740px;
+    --main-max-width: 1280px;
 
 }
 
