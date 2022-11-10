@@ -19,7 +19,7 @@
 
     /* Font sizes */
 
-    --paragraph-font-size: 3vh;
+    --paragraph-font-size: 5.5vh;
     --heading-font-size: 6vh;
     --page-title-font-size: 4vh;
     --menu-font-size: 3vh;
@@ -266,7 +266,7 @@ p {
 }
 
 .heading {
-    margin-top: 10vh;
+    margin-top: 20vh;
     margin-bottom: 2vh;
     font-size: var(--heading-font-size);
     font-family: var(--heading-font);
