@@ -5,7 +5,7 @@
 
 :root {
     /* Set to none zero to see all borders */
-    --border-width: 1px;
+    --border-width: 0px;
     --border-color: violet;
 
     /* Fonts */
@@ -95,7 +95,7 @@ p {
     font-family: var(--paragraph-font);
     font-size: var(--paragraph-font-size);
     font-weight: var(--paragraph-font-weight);
-    margin: 0 2vw;
+    margin: 0 0.5vw;
 }
 
 .text-center {
@@ -186,7 +186,7 @@ p {
     .menu-icon {
         display: block;
         border: var(--border-width) solid var(--border-color);
-        margin-right: 20px;
+        margin-right: 4vw;
         position: absolute;
         right: 0;
         cursor: pointer;
@@ -212,7 +212,7 @@ p {
         display: block;
         margin: 10px;
         background-color: white;
-        width: 40px;
+        width: 7vw;
         height: 5px;
         border-radius: 10px;
         border: none;
