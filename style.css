@@ -5,7 +5,7 @@
 
 :root {
     /* Set to none zero to see all borders */
-    --border-width: 0px;
+    --border-width: 0;
     --border-color: violet;
 
     /* Fonts */
