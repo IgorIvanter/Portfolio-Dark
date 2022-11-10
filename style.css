@@ -1,0 +1,339 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Lato:ital,wght@0,400;0,700;1,400;1,700&family=Source+Serif+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
+
+/* Importing DM-Sans, Abril Fatface, Lato, Source Serif Pro from Google Fonts */
+
+
+:root {
+    /* Set to none zero to see all borders */
+    --border-width: 0px;
+    --border-color: violet;
+
+    /* Fonts */
+
+    --heading-font: 'DM Sans', sans-serif;
+    --paragraph-font: 'Source Serif Pro', sans-serif;
+    --page-title-font: 'DM Sans', sans-serif;
+    --menu-font: 'DM Sans', sans-serif;
+    --footer-font: 'Source Serif Pro', sans-serif;
+
+
+    /* Font sizes */
+
+    --paragraph-font-size: 19px;
+    --heading-font-size: 60px;
+    --page-title-font-size: 30px;
+    --menu-font-size: 16px;
+    --footer-font-size: 16px;
+
+    /* Font weights */
+
+    --page-title-font-weight: 1000;
+    --paragraph-font-weight: lighter;
+
+    /* !!! TODO: make it so that font-sizes change if it's a mobile device*/
+
+    /* !!! FIX: this looks bad on really large screens */
+
+    /* Color palette */
+
+    --violet: #a502e6;
+    --testing-black: rgb(29, 29, 29);
+    --red: rgb(146, 0, 59);
+    
+
+    --color1: #2e003e;
+    --color2: #3d2352;
+    --color3: #3d1e6d;
+    --color4: #8874a3;
+    --color5: #e4dcf1;
+
+    /* The maximum width after which the navigation bar stops stretching */
+
+    --navbar-max-width: 1280px;
+
+    /* The maximum width after which main stops stretching */
+
+    --main-max-width: 740px;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+link {
+    text-decoration: none;
+    display: none;
+}
+
+body {
+    background-color: var(--testing-black);
+}
+
+ul {
+    list-style: none;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: var(--testing-black);
+    border: var(--border-width) solid var(--border-color);
+}
+
+main {
+    color: white;
+    font-family: var(--secondary-font);
+    display: block;
+    max-width: var(--main-max-width);
+    margin: 0 auto;
+    border: var(--border-width) solid var(--border-color);
+}
+
+p {
+    font-family: var(--paragraph-font);
+    font-size: var(--paragraph-font-size);
+    font-weight: var(--paragraph-font-weight);
+    margin: 0 10px;
+}
+
+.text-center {
+    text-align: center;
+    /* This is to apply text-centering to a container */
+}
+
+.page-title {
+    margin-left: 20px;
+    border: var(--border-width) solid var(--border-color);
+    font-family: var(--page-title-font);
+    font-size: var(--page-title-font-size);
+    font-weight: var( --page-title-font-weight);
+    cursor: pointer;
+}
+
+.navigation-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    width: 100vw;
+    max-width: var(--navbar-max-width);
+    margin: 0 auto;
+    color: white;
+    background-color: var(--testing-black);
+    border: var(--border-width) solid var(--border-color);
+    border-bottom: 2px solid white;
+    position: fixed;
+    top: 0;
+    z-index: 99;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    font-family: var(--menu-font);
+    font-size: var(--menu-font-size);
+    border: var(--border-width) solid var(--border-color);
+}
+
+.menu > li {
+    /* !!! FIX: make it so that taps are styled the same way as clicks !!! */
+    padding: 5px 2vw;
+    margin: 0 5px;
+    border: var(--border-width) solid var(--border-color);
+    border-radius: 15px;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+/* Button effects alternative number 1 */
+
+.menu > li:hover {
+    background-color: var(--violet);
+}
+
+.menu > li:active {
+    background-color: white;
+    color: var(--violet);
+}
+
+/* Button effects alternative number 2 */
+
+/* .menu > li:hover {
+    color:  #a502e6;
+}
+
+.menu > li:active {
+    opacity: 0.7;
+} */
+
+/* TODO: I can make a variable which defines which of the two hover effects applies */
+
+.menu-icon {
+    display: none;
+}
+
+.mobile-menu {
+    display: none;
+}
+
+@media (max-width: 650px) {
+    .menu {
+        display: none;
+    }
+
+    .menu-icon {
+        display: block;
+        border: var(--border-width) solid var(--border-color);
+        margin-right: 20px;
+        position: absolute;
+        right: 0;
+        cursor: pointer;
+    }
+
+    .menu-icon.mobile-menu-opened span:nth-child(1) {
+        transform: translateY(15px) rotate(45deg);
+    }
+    
+    .menu-icon.mobile-menu-opened span:nth-child(2) {
+        transform: translateX(70px);
+    }
+
+    .menu-icon.mobile-menu-opened span:nth-child(3) {
+        transform: translateY(-15px) rotate(-45deg);
+    }
+
+    .menu-icon:hover > .stripe {
+        background-color: var(--violet);
+    }
+    
+    .stripe {
+        display: block;
+        margin: 10px;
+        background-color: white;
+        width: 40px;
+        height: 5px;
+        border-radius: 10px;
+        border: none;
+        transition: 0.2s;
+    }
+
+    .mobile-menu {
+        display: block;
+        color: white;
+        background-color: black;
+        padding-top: 10px;
+        padding-bottom: 5px;
+        margin: 0 auto;
+        border: var(--border-width) solid var(--border-color);
+        width: 100%;
+        max-width: var(--navbar-max-width);
+        border-bottom: 2px solid white;
+        position: fixed;
+        top: -30vh;
+        z-index: 98;
+        transition: 0.6s;
+        font-family: var(--menu-font);
+        font-size: var(--menu-font-size);
+    }
+
+    .mobile-menu.opened {
+        top: 62px;      /* 60px for the height of the navbar and 2px for the bottom border */
+    }
+    
+    .mobile-menu > li {
+        display: block;
+        width: fit-content;
+        padding: 5px 2vw;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 0;
+        margin-bottom: 10px;
+        border-radius: 15px;
+        transition: 0.2s;
+        cursor: pointer;
+    }
+
+    .mobile-menu > li:hover {
+        background-color: var(--violet);
+    }
+
+    .mobile-menu > li:active {
+        background-color: white;
+        color: var(--violet);
+    }
+}
+
+.heading {
+    margin: 30px;
+    margin-top: 92px;
+    font-size: 60px;
+    font-family: var(--heading-font);
+}
+
+#the-heading {
+    position: static;
+}
+
+.content-index {
+    margin-left: 40px;
+    margin-right: px;
+    height: 400px;
+    background-color: var(--color2);
+}
+
+footer {
+    border: var(--border-width) solid var(--border-color);
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    text-align: center;
+    margin-bottom: 30px;
+    font-family: var(--footer-font);
+    font-size: var(--footer-font-size);
+    font-weight: bold;
+}
+
+.social-icon {
+    height: 30px;
+    width: 30px;
+    margin: 5px;
+    cursor: pointer;
+    border: var(--border-width) solid var(--border-color);
+}
+
+.social-icon path {
+    border: 1px solid red;
+    fill: white;
+    opacity: 0.5;
+    transition: 0.2s;
+}
+
+.social-icon:hover path {
+    fill: var(--violet);
+}
+
+.footer-menu {
+    display: flex;
+    justify-content: center;
+    border: var(--border-width) solid var(--border-color);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    padding-top: 20px;
+    margin: 20px 0;
+    color: white;
+    font-weight: lighter;
+}
+
+.footer-menu > li {
+    opacity: 0.5;
+    margin: 0 20px;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.footer-menu > li:hover {
+    color: var(--violet);
+    opacity: 1;
+}
+
