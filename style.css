@@ -266,8 +266,8 @@ p {
 }
 
 .heading {
-    margin: 30px;
-    margin-top: 92px;
+    margin-top: 10vh;
+    margin-bottom: 2vh;
     font-size: var(--heading-font-size);
     font-family: var(--heading-font);
 }
