@@ -8,31 +8,6 @@
     --border-width: 0px;
     --border-color: violet;
 
-    /* Fonts */
-
-    --heading-font: 'DM Sans', sans-serif;
-    --paragraph-font: 'Source Serif Pro', sans-serif;
-    --page-title-font: 'Didact Gothic', sans-serif;
-    --menu-font: 'DM Sans', sans-serif;
-    --footer-font: 'Source Serif Pro', sans-serif;
-
-
-    /* Font sizes */
-
-    --paragraph-font-size: 16px;
-    --heading-font-size: 30px;
-    --page-title-font-size: 30px;
-    --menu-font-size: 3vh;
-    --footer-font-size: 3vh;
-
-    /* Font weights */
-
-    --page-title-font-weight: 700;
-    --paragraph-font-weight: lighter;
-
-    /* !!! TODO: make it so that font-sizes change if it's a mobile device*/
-
-    /* !!! FIX: this looks bad on really large screens */
 
     /* Color palette */
 
@@ -57,12 +32,23 @@
 
 }
 
+
+input,
+textarea,
+button,
+select,
+a {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+
 /* Universal stuff for both mobile and desktop: */
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Source Serif Pro', sans-serif;
 }
 
 link {
@@ -122,18 +108,17 @@ main {
 }
 
 p {
-    font-family: var(--paragraph-font);
-    font-size: var(--paragraph-font-size);
-    font-weight: var(--paragraph-font-weight);
+    font-size: 16px;
+    font-weight: lighter;
     margin: 10px;
 }
 
 .page-title {
     margin-left: 20px;
     border: var(--border-width) solid var(--border-color);
-    font-family: var(--page-title-font);
-    font-size: var(--page-title-font-size);
-    font-weight: var( --page-title-font-weight);
+    font-family: 'Didact Gothic', sans-serif;
+    font-size: 30px;
+    font-weight: 700;
     cursor: pointer;
 }
 
@@ -157,8 +142,8 @@ p {
 .menu {
     display: flex;
     justify-content: center;
-    font-family: var(--menu-font);
-    font-size: var(--menu-font-size);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 25px;
     border: var(--border-width) solid var(--border-color);
 }
 
@@ -192,8 +177,8 @@ p {
 .heading {
     margin-top: 102px;
     margin-bottom: 6vh;
-    font-size: var(--heading-font-size);
-    font-family: var(--heading-font);
+    font-size: 30px;
+    font-weight: normal;
     position: static;
 }
 
@@ -204,8 +189,7 @@ footer {
     bottom: 0;
     text-align: center;
     margin-bottom: 30px;
-    font-family: var(--footer-font);
-    font-size: var(--footer-font-size);
+    font-size: 16px;
     font-weight: bold;
 }
 
@@ -290,7 +274,6 @@ footer {
     /* General changes for the mobile device */
 
     p {
-        font-family: 'Source Serif Pro', sans-serif;
         font-size: 20px;
         font-weight: lighter;
         margin-top: 35px;
@@ -319,9 +302,9 @@ footer {
 
     .page-title {
         border: var(--border-width) solid var(--border-color);
-        font-family: var(--page-title-font);
+        font-family: 'Didact Gothic', sans-serif;
         font-size: 60px;
-        font-weight: var( --page-title-font-weight);
+        font-weight: 700;
         cursor: pointer;
     }
 
@@ -332,7 +315,7 @@ footer {
     .menu-icon {
         display: block;
         border: var(--border-width) solid var(--border-color);
-        margin-right: 4vw;
+        margin-right: 50px;
         position: absolute;
         background-color: var(--testing-black);
         right: 0;
@@ -340,30 +323,26 @@ footer {
     }
 
     .menu-icon.mobile-menu-opened span:nth-child(1) {
-        transform: translateY(15px) rotate(45deg);
+        transform: translateY(22px) rotate(45deg);
     }
     
     .menu-icon.mobile-menu-opened span:nth-child(2) {
-        transform: translateX(70px);
+        transform: translateX(150px);
     }
 
     .menu-icon.mobile-menu-opened span:nth-child(3) {
-        transform: translateY(-15px) rotate(-45deg);
-    }
-
-    .menu-icon:hover > .stripe {
-        background-color: var(--violet);
+        transform: translateY(-22px) rotate(-45deg);
     }
     
     .stripe {
         display: block;
-        margin: 10px;
+        margin: 12px;
         background-color: white;
-        width: 7vw;
-        height: 5px;
+        width: 70px;
+        height: 10px;
         border-radius: 10px;
         border: none;
-        transition: 0.2s;
+        transition: 0.35s;
     }
 
     .heading {
@@ -381,6 +360,11 @@ footer {
         margin-top: 0;
     }
 
+    p + .heading {
+        margin-top: 0;
+    }
+
+
     .mobile-menu {
         display: block;
         color: white;
@@ -391,23 +375,24 @@ footer {
         border: var(--border-width) solid var(--border-color);
         width: 100%;
         max-width: var(--navbar-max-width);
+        height: calc(100vh - 202px);
         border-bottom: 2px solid white;
         position: fixed;
-        top: -30vh;
+        top: -100vh;
         z-index: 98;
-        transition: 0.6s;
-        font-family: var(--menu-font);
-        font-size: var(--menu-font-size);
+        transition: 1s;
+        font-family: 'DM Sans', sans-serif;
+        font-size: 70px;
     }
 
     .mobile-menu.opened {
-        top: 8vh;      /* 60px for the height of the navbar and 2px for the bottom border */
+        top: 202px;
     }
     
     .mobile-menu > li {
         display: block;
         width: fit-content;
-        padding: 5px 2vw;
+        padding: 15px 0;
         margin-left: auto;
         margin-right: auto;
         margin-top: 0;
@@ -417,15 +402,6 @@ footer {
         cursor: pointer;
     }
 
-    .mobile-menu > li:hover {
-        background-color: var(--violet);
-    }
-
-    .mobile-menu > li:active {
-        background-color: white;
-        color: var(--violet);
-    }
-
     footer {
         border: var(--border-width) solid var(--border-color);
         position: relative;
@@ -433,14 +409,11 @@ footer {
         bottom: 0;
         text-align: center;
         margin-bottom: 30px;
-        font-family: var(--footer-font);
-        font-size: var(--footer-font-size);
-        font-weight: bold;
     }
     
     .social-icon {
-        height: 30px;
-        width: 30px;
+        height: 90px;
+        width: 90px;
         margin: 5px;
         cursor: pointer;
         border: var(--border-width) solid var(--border-color);
@@ -465,7 +438,8 @@ footer {
         padding-top: 20px;
         margin: 20px 0;
         color: white;
-        font-weight: lighter;
+        font-weight: normal;
+        font-size: 60px;
     }
     
     .footer-menu > li {
@@ -473,10 +447,6 @@ footer {
         margin: 0 20px;
         transition: 0.2s;
         cursor: pointer;
-    }
-    
-    .footer-menu > li:hover {
-        color: var(--violet);
-        opacity: 1;
+        -webkit-tap-highlight-color: transparent;
     }
 }
