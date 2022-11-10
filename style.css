@@ -78,12 +78,19 @@ ul {
     list-style: none;
 }
 
+.text-center {
+    text-align: center;
+}
 
 
 
 
 
 
+
+
+
+/*-------------------- !!! Desktop begins !!! -----------------------------*/
 
 
 /*-------------------- !!! Desktop begins !!! -----------------------------*/
@@ -92,14 +99,10 @@ ul {
 /*-------------------- !!! Desktop begins !!! -----------------------------*/
 
 
-/*-------------------- !!! Desktop begins !!! -----------------------------*/
 
 
 
-
-
-
-
+@media (min-width: 990px) {
 
 
 nav {
@@ -123,11 +126,6 @@ p {
     font-size: var(--paragraph-font-size);
     font-weight: var(--paragraph-font-weight);
     margin: 10px;
-}
-
-.text-center {
-    text-align: center;
-    /* This is to apply text-centering to a container */
 }
 
 .page-title {
@@ -174,8 +172,6 @@ p {
     cursor: pointer;
 }
 
-/* Button effects alternative number 1 */
-
 .menu > li:hover {
     background-color: var(--violet);
 }
@@ -184,18 +180,6 @@ p {
     background-color: white;
     color: var(--violet);
 }
-
-/* Button effects alternative number 2 */
-
-/* .menu > li:hover {
-    color:  #a502e6;
-}
-
-.menu > li:active {
-    opacity: 0.7;
-} */
-
-/* TODO: I can make a variable which defines which of the two hover effects applies */
 
 .menu-icon {
     display: none;
@@ -211,13 +195,6 @@ p {
     font-size: var(--heading-font-size);
     font-family: var(--heading-font);
     position: static;
-}
-
-.content-index {
-    margin-left: 40px;
-    margin-right: px;
-    height: 400px;
-    background-color: var(--color2);
 }
 
 footer {
@@ -274,7 +251,7 @@ footer {
     opacity: 1;
 }
 
-
+}
 
 
 
@@ -294,11 +271,28 @@ footer {
 
 
 @media (max-width: 990px) {
+    nav {
+        display: flex;
+        justify-content: center;
+        background-color: var(--testing-black);
+        border: var(--border-width) solid var(--border-color);
+    }
+    
+    main {
+        color: white;
+        font-family: var(--secondary-font);
+        display: block;
+        max-width: var(--main-max-width);
+        margin: 0 auto;
+        border: var(--border-width) solid var(--border-color);
+    }
     
     /* General changes for the mobile device */
 
     p {
+        font-family: 'Source Serif Pro', sans-serif;
         font-size: 20px;
+        font-weight: lighter;
         margin-top: 35px;
         margin-bottom: 35px;
         margin-left: 15px;
@@ -307,16 +301,26 @@ footer {
     }
     
     .navigation-bar {
+        display: flex;
         justify-content: center;
+        align-items: center;
         height: 200px;
+        width: 100vw;
+        max-width: var(--navbar-max-width);
+        margin: 0 auto;
+        color: white;
+        background-color: var(--testing-black);
         border: var(--border-width) solid var(--border-color);
         border-bottom: 2px solid white;
+        position: fixed;
+        top: 0;
+        z-index: 99;
     }
 
     .page-title {
         border: var(--border-width) solid var(--border-color);
         font-family: var(--page-title-font);
-        font-size: 70px;
+        font-size: 60px;
         font-weight: var( --page-title-font-weight);
         cursor: pointer;
     }
@@ -365,17 +369,12 @@ footer {
     .heading {
         margin-top: 202px;
         margin-bottom: 0;
+        margin-left: auto;
+        margin-right: auto;
         padding: 100px 0;
         border: var(--border-width) solid var(--border-color);
         font-weight: 400;
         font-size: 100px;
-    }
-
-    main {
-        display: grid;
-        border: var(--border-width) solid var(--border-color);
-        grid-template-columns: 2;
-        grid-template-rows: 4;
     }
 
     .heading + p {
@@ -425,5 +424,59 @@ footer {
     .mobile-menu > li:active {
         background-color: white;
         color: var(--violet);
+    }
+
+    footer {
+        border: var(--border-width) solid var(--border-color);
+        position: relative;
+        width: 100%;
+        bottom: 0;
+        text-align: center;
+        margin-bottom: 30px;
+        font-family: var(--footer-font);
+        font-size: var(--footer-font-size);
+        font-weight: bold;
+    }
+    
+    .social-icon {
+        height: 30px;
+        width: 30px;
+        margin: 5px;
+        cursor: pointer;
+        border: var(--border-width) solid var(--border-color);
+    }
+    
+    .social-icon path {
+        border: 1px solid red;
+        fill: white;
+        opacity: 0.5;
+        transition: 0.2s;
+    }
+    
+    .social-icon:hover path {
+        fill: var(--violet);
+    }
+    
+    .footer-menu {
+        display: flex;
+        justify-content: center;
+        border: var(--border-width) solid var(--border-color);
+        border-top: 1px solid rgba(255, 255, 255, 0.5);
+        padding-top: 20px;
+        margin: 20px 0;
+        color: white;
+        font-weight: lighter;
+    }
+    
+    .footer-menu > li {
+        opacity: 0.5;
+        margin: 0 20px;
+        transition: 0.2s;
+        cursor: pointer;
+    }
+    
+    .footer-menu > li:hover {
+        color: var(--violet);
+        opacity: 1;
     }
 }
