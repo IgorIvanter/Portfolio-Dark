@@ -188,6 +188,7 @@ p {
         border: var(--border-width) solid var(--border-color);
         margin-right: 4vw;
         position: absolute;
+        background-color: var(--testing-black);
         right: 0;
         cursor: pointer;
     }
