@@ -199,6 +199,14 @@ main {
     position: static;
 }
 
+p + .heading {
+    margin-top: 0;
+}
+
+.important {
+    border: 2px solid var(--violet);
+}
+
 p {
     font-size: 18px;
     font-weight: lighter;
