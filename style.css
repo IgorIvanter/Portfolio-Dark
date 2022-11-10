@@ -28,7 +28,7 @@
 
     /* The maximum width after which main stops stretching */
 
-    --main-max-width: 1280px;
+    --main-max-width: 1100px;
 
 }
 
@@ -49,6 +49,7 @@ a {
     padding: 0;
     box-sizing: border-box;
     font-family: 'Source Serif Pro', sans-serif;
+    color: white;
 }
 
 link {
@@ -66,6 +67,11 @@ ul {
 
 .text-center {
     text-align: center;
+}
+
+em {
+    color: var(--violet);
+    font-style: italic;
 }
 
 
@@ -98,21 +104,6 @@ nav {
     border: var(--border-width) solid var(--border-color);
 }
 
-main {
-    color: white;
-    font-family: var(--secondary-font);
-    display: block;
-    max-width: var(--main-max-width);
-    margin: 0 auto;
-    border: var(--border-width) solid var(--border-color);
-}
-
-p {
-    font-size: 16px;
-    font-weight: lighter;
-    margin: 10px;
-}
-
 .page-title {
     margin-left: 20px;
     border: var(--border-width) solid var(--border-color);
@@ -126,11 +117,10 @@ p {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 100px;
+    height: 70px;
     width: 100vw;
     max-width: var(--navbar-max-width);
     margin: 0 auto;
-    color: white;
     background-color: var(--testing-black);
     border: var(--border-width) solid var(--border-color);
     border-bottom: 2px solid white;
@@ -174,12 +164,45 @@ p {
     display: none;
 }
 
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    max-width: var(--main-max-width);
+    margin: 0 auto;
+    border: var(--border-width) solid var(--border-color);
+}
+
+.paragraph {
+    margin-right: 150px;
+}
+
+.paragraph:nth-child(1) {
+    grid-column-start: 1;
+    grid-column-end: span 1;
+    border: var(--border-width) solid var(--border-color);
+}
+
+.paragraph:nth-child(2) {
+    grid-column-start: 2;
+    grid-column-end: span 1;
+    border: var(--border-width) solid var(--border-color);
+}
+
 .heading {
     margin-top: 102px;
-    margin-bottom: 6vh;
+    padding: 30px 0;
     font-size: 30px;
     font-weight: normal;
+    border: var(--border-width) solid var(--border-color);
     position: static;
+}
+
+p {
+    font-size: 18px;
+    font-weight: lighter;
+    margin: 10px;
 }
 
 footer {
@@ -346,24 +369,16 @@ footer {
     }
 
     .heading {
-        margin-top: 202px;
-        margin-bottom: 0;
-        margin-left: auto;
-        margin-right: auto;
+        margin: 0 auto;
         padding: 100px 0;
         border: var(--border-width) solid var(--border-color);
         font-weight: 400;
         font-size: 100px;
     }
 
-    .heading + p {
-        margin-top: 0;
+    #the-heading {
+        margin-top: 202px;
     }
-
-    p + .heading {
-        margin-top: 0;
-    }
-
 
     .mobile-menu {
         display: block;
