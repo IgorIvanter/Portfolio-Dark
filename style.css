@@ -273,9 +273,11 @@ em {
 
     footer {
         border: var(--border-width) solid var(--border-color);
+        display: block;
         position: relative;
         width: 100%;
         bottom: 0;
+        justify-content: center;
         text-align: center;
         margin-bottom: 30px;
         font-size: 16px;
@@ -308,7 +310,8 @@ em {
         border: var(--border-width) solid var(--border-color);
         border-top: 1px solid rgba(255, 255, 255, 0.5);
         padding-top: 20px;
-        margin: 20px 0;
+        margin: 20px auto;
+        max-width: var(--navbar-max-width);
         color: white;
         font-weight: lighter;
     }
@@ -516,6 +519,7 @@ em {
         justify-content: center;
         border: var(--border-width) solid var(--border-color);
         border-top: 1px solid rgba(255, 255, 255, 0.5);
+        max-width: var(--navbar-max-width);
         padding-top: 20px;
         margin: 20px 0;
         color: white;
