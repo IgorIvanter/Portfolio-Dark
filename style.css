@@ -52,6 +52,7 @@ select {
     font-family: 'Source Serif Pro', sans-serif;
     color: white;
     text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 link {
@@ -268,7 +269,6 @@ em {
     }
 
     .menu > li > a, .mobile-menu > li > a, .footer-menu > li > a {
-        text-decoration: none;
         transition: 0.4s;
     }
 }
@@ -341,7 +341,6 @@ em {
         font-family: 'Didact Gothic', sans-serif;
         font-size: 60px;
         font-weight: 700;
-        cursor: pointer;
     }
 
     .menu {
@@ -426,8 +425,11 @@ em {
         margin-top: 0;
         margin-bottom: 10px;
         border-radius: 15px;
-        transition: 0.2s;
         cursor: pointer;
+    }
+
+    .mobile-menu > li > a {
+        transition: 0.4s;
     }
 
     footer {
@@ -440,22 +442,18 @@ em {
     }
     
     .social-icon {
-        height: 90px;
-        width: 90px;
-        margin: 5px;
+        height: 100px;
+        width: 100px;
+        padding: 10px;
+        margin: 10px;
         cursor: pointer;
         border: var(--border-width) solid var(--border-color);
     }
     
     .social-icon path {
-        border: 1px solid red;
         fill: white;
         opacity: 0.5;
-        transition: 0.2s;
-    }
-    
-    .social-icon:hover path {
-        fill: var(--violet);
+        transition: 0.4s;
     }
     
     .footer-menu {
@@ -473,8 +471,17 @@ em {
     .footer-menu > li {
         opacity: 0.5;
         margin: 0 20px;
-        transition: 0.2s;
-        cursor: pointer;
-        -webkit-tap-highlight-color: transparent;
+    }
+
+    .footer-menu > li > a {
+        transition: 0.4s;
+    }
+
+    .mobile-menu > li > a:active, .footer-menu > li > a:active {
+        color: var(--violet);
+    }
+
+    .social-icon:active path {
+        fill: var(--violet);
     }
 }
