@@ -36,13 +36,14 @@
 input,
 textarea,
 button,
-select,
-a {
+select {
   -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
 
 /* Universal stuff for both mobile and desktop: */
+
+/* Resetting all the default browser styling */
 
 * {
     margin: 0;
@@ -50,6 +51,7 @@ a {
     box-sizing: border-box;
     font-family: 'Source Serif Pro', sans-serif;
     color: white;
+    text-decoration: none;
 }
 
 link {
@@ -97,175 +99,178 @@ em {
 @media (min-width: 990px) {
 
 
-nav {
-    display: flex;
-    justify-content: center;
-    background-color: var(--testing-black);
-    border: var(--border-width) solid var(--border-color);
-}
+    nav {
+        display: flex;
+        justify-content: center;
+        background-color: var(--testing-black);
+        border: var(--border-width) solid var(--border-color);
+    }
 
-.page-title {
-    margin-left: 20px;
-    border: var(--border-width) solid var(--border-color);
-    font-family: 'Didact Gothic', sans-serif;
-    font-size: 30px;
-    font-weight: 700;
-    cursor: pointer;
-}
+    .page-title {
+        margin-left: 20px;
+        border: var(--border-width) solid var(--border-color);
+        font-family: 'Didact Gothic', sans-serif;
+        font-size: 30px;
+        font-weight: 700;
+        cursor: pointer;
+    }
 
-.navigation-bar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 70px;
-    width: 100vw;
-    max-width: var(--navbar-max-width);
-    margin: 0 auto;
-    background-color: var(--testing-black);
-    border: var(--border-width) solid var(--border-color);
-    border-bottom: 2px solid white;
-    position: fixed;
-    top: 0;
-    z-index: 99;
-}
+    .navigation-bar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 70px;
+        width: 100vw;
+        max-width: var(--navbar-max-width);
+        margin: 0 auto;
+        background-color: var(--testing-black);
+        border: var(--border-width) solid var(--border-color);
+        border-bottom: 2px solid white;
+        position: fixed;
+        top: 0;
+        z-index: 99;
+    }
 
-.menu {
-    display: flex;
-    justify-content: center;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 25px;
-    border: var(--border-width) solid var(--border-color);
-}
+    .menu {
+        display: flex;
+        justify-content: center;
+        font-family: 'DM Sans', sans-serif;
+        font-size: 25px;
+        border: var(--border-width) solid var(--border-color);
+    }
 
-.menu > li {
-    /* !!! FIX: make it so that taps are styled the same way as clicks !!! */
-    padding: 5px 2vw;
-    margin: 0 5px;
-    border: var(--border-width) solid var(--border-color);
-    border-radius: 15px;
-    transition: 0.2s;
-    cursor: pointer;
-}
+    .menu > li {
+        /* !!! FIX: make it so that taps are styled the same way as clicks !!! */
+        padding: 5px 2vw;
+        margin: 0 5px;
+        border: var(--border-width) solid var(--border-color);
+        border-radius: 15px;
+        transition: 0.2s;
+        cursor: pointer;
+    }
 
-.menu > li:hover {
-    background-color: var(--violet);
-}
+    .menu > li:hover {
+        background-color: var(--violet);
+    }
 
-.menu > li:active {
-    background-color: white;
-    color: var(--violet);
-}
+    .menu > li:active {
+        background-color: white;
+        color: var(--violet);
+    }
 
-.menu-icon {
-    display: none;
-}
+    .menu-icon {
+        display: none;
+    }
 
-.mobile-menu {
-    display: none;
-}
+    .mobile-menu {
+        display: none;
+    }
 
 
-main {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    max-width: var(--main-max-width);
-    margin: 0 auto;
-    border: var(--border-width) solid var(--border-color);
-}
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        max-width: var(--main-max-width);
+        margin: 0 auto;
+        border: var(--border-width) solid var(--border-color);
+    }
 
-.paragraph {
-    margin-right: 150px;
-}
+    .paragraph {
+        margin-right: 150px;
+    }
 
-.paragraph:nth-child(1) {
-    grid-column-start: 1;
-    grid-column-end: span 1;
-    border: var(--border-width) solid var(--border-color);
-}
+    .paragraph:nth-child(1) {
+        grid-column-start: 1;
+        grid-column-end: span 1;
+        border: var(--border-width) solid var(--border-color);
+    }
 
-.paragraph:nth-child(2) {
-    grid-column-start: 2;
-    grid-column-end: span 1;
-    border: var(--border-width) solid var(--border-color);
-}
+    .paragraph:nth-child(2) {
+        grid-column-start: 2;
+        grid-column-end: span 1;
+        border: var(--border-width) solid var(--border-color);
+    }
 
-.heading {
-    margin-top: 102px;
-    padding: 30px 0;
-    font-size: 30px;
-    font-weight: normal;
-    border: var(--border-width) solid var(--border-color);
-    position: static;
-}
+    .heading {
+        margin-top: 102px;
+        padding: 30px 0;
+        font-size: 30px;
+        font-weight: normal;
+        border: var(--border-width) solid var(--border-color);
+        position: static;
+    }
 
-p + .heading {
-    margin-top: 0;
-}
+    p + .heading {
+        margin-top: 0;
+    }
 
-.important {
-    border: 2px solid var(--violet);
-}
+    .important {
+        border: 2px solid var(--violet);
+    }
 
-p {
-    font-size: 18px;
-    font-weight: lighter;
-    margin: 10px;
-}
+    p {
+        font-size: 18px;
+        font-weight: lighter;
+        margin: 10px;
+    }
 
-footer {
-    border: var(--border-width) solid var(--border-color);
-    position: relative;
-    width: 100%;
-    bottom: 0;
-    text-align: center;
-    margin-bottom: 30px;
-    font-size: 16px;
-    font-weight: bold;
-}
+    footer {
+        border: var(--border-width) solid var(--border-color);
+        position: relative;
+        width: 100%;
+        bottom: 0;
+        text-align: center;
+        margin-bottom: 30px;
+        font-size: 16px;
+        font-weight: bold;
+    }
 
-.social-icon {
-    height: 30px;
-    width: 30px;
-    margin: 5px;
-    cursor: pointer;
-    border: var(--border-width) solid var(--border-color);
-}
+    .social-icon {
+        height: 50px;
+        width: 50px;
+        padding: 10px;
+        margin: 5px;
+        cursor: pointer;
+        border: var(--border-width) solid var(--border-color);
+    }
 
-.social-icon path {
-    border: 1px solid red;
-    fill: white;
-    opacity: 0.5;
-    transition: 0.2s;
-}
+    .social-icon path {
+        border: 1px solid red;
+        fill: white;
+        opacity: 0.5;
+        transition: 0.4s;
+    }
 
-.social-icon:hover path {
-    fill: var(--violet);
-}
+    .social-icon:hover path {
+        fill: var(--violet);
+    }
 
-.footer-menu {
-    display: flex;
-    justify-content: center;
-    border: var(--border-width) solid var(--border-color);
-    border-top: 1px solid rgba(255, 255, 255, 0.5);
-    padding-top: 20px;
-    margin: 20px 0;
-    color: white;
-    font-weight: lighter;
-}
+    .footer-menu {
+        display: flex;
+        justify-content: center;
+        border: var(--border-width) solid var(--border-color);
+        border-top: 1px solid rgba(255, 255, 255, 0.5);
+        padding-top: 20px;
+        margin: 20px 0;
+        color: white;
+        font-weight: lighter;
+    }
 
-.footer-menu > li {
-    opacity: 0.5;
-    margin: 0 20px;
-    transition: 0.2s;
-    cursor: pointer;
-}
+    .footer-menu > li {
+        opacity: 0.5;
+        margin: 0 20px;
+        cursor: pointer;
+    }
 
-.footer-menu > li:hover {
-    color: var(--violet);
-    opacity: 1;
-}
+    .footer-menu > li > a:hover {
+        color: var(--violet);
+    }
 
+    .menu > li > a, .mobile-menu > li > a, .footer-menu > li > a {
+        text-decoration: none;
+        transition: 0.4s;
+    }
 }
 
 
