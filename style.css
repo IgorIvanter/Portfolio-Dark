@@ -165,14 +165,24 @@ em {
         display: none;
     }
 
-
     main {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto auto auto;
+        row-gap: 100px;
         max-width: var(--main-max-width);
-        margin: 0 auto;
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: 72px;         /* 70px for the fixed and 2px for the border */
         border: var(--border-width) solid var(--border-color);
+    }
+
+    .heading {
+        padding: 30px 0;
+        font-size: 30px;
+        font-weight: normal;
+        border: var(--border-width) solid var(--border-color);
+        position: static;
     }
 
     .paragraph {
@@ -231,18 +241,8 @@ em {
         font-style: normal;
         opacity: 0.7;
     }
-    
-    .heading {
-        margin-top: 102px;
-        padding: 30px 0;
-        font-size: 30px;
-        font-weight: normal;
-        border: var(--border-width) solid var(--border-color);
-        position: static;
-    }
 
     #goethe-quote {
-        margin: 102px 0;
         text-align: left;
         padding: 30px;
         /* border-left: 2px solid white; */
