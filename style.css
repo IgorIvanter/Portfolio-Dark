@@ -98,8 +98,6 @@ em {
 
 
 @media (min-width: 990px) {
-
-
     nav {
         display: flex;
         justify-content: center;
@@ -171,7 +169,7 @@ em {
     main {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
+        grid-template-rows: auto auto auto;
         max-width: var(--main-max-width);
         margin: 0 auto;
         border: var(--border-width) solid var(--border-color);
@@ -182,17 +180,58 @@ em {
     }
 
     .paragraph:nth-child(1) {
+        grid-row-start: 1;
+        grid-row-end: span 1;
         grid-column-start: 1;
         grid-column-end: span 1;
         border: var(--border-width) solid var(--border-color);
     }
 
     .paragraph:nth-child(2) {
+        grid-row-start: 1;
+        grid-row-end: span 1;
         grid-column-start: 2;
         grid-column-end: span 1;
         border: var(--border-width) solid var(--border-color);
     }
 
+    .paragraph:nth-child(3) {
+        grid-column-start: 1;
+        grid-column-end: span 1;
+        grid-row-start: 2;
+        grid-row-end: span 1;
+        border: var(--border-width) solid var(--border-color);
+    }
+
+    .paragraph:nth-child(4) {
+        grid-column-start: 2;
+        grid-column-end: span 1;
+        grid-row-start: 2;
+        grid-row-end: span 1;
+        border: var(--border-width) solid var(--border-color);
+    }
+
+    .paragraph:nth-child(5) {
+        grid-column-start: 1;
+        grid-column-end: span 2;
+        grid-row-start: 3;
+        grid-row-end: span 1;
+        border: var(--border-width) solid var(--border-color);
+    }
+
+    .quote {
+        font-size: 40px;
+        font-style: italic;
+    }
+
+    .quote-author {
+        text-align: right;
+        display: block;
+        font-size: 0.5em;
+        font-style: normal;
+        opacity: 0.7;
+    }
+    
     .heading {
         margin-top: 102px;
         padding: 30px 0;
@@ -200,6 +239,22 @@ em {
         font-weight: normal;
         border: var(--border-width) solid var(--border-color);
         position: static;
+    }
+
+    #goethe-quote {
+        margin: 102px 0;
+        text-align: left;
+        padding: 30px;
+        /* border-left: 2px solid white; */
+    }
+
+    .heading.module-name {
+        padding: 30px;
+        border-left: 2px solid white;
+    }
+
+    .heading.module-name > a:hover {
+        text-decoration: underline;
     }
 
     p + .heading {
