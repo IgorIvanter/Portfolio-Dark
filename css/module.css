@@ -97,12 +97,15 @@ em {
         grid-column-end: span 2;
         grid-row-start: 1;
         grid-row-end: span 1;
+        margin: 50px 0;
         border: var(--border-width) solid var(--border-color);
     }
 
     .module-subheading {
         grid-column-start: 1;
         grid-column-end: span 2;
+        margin-bottom: 50px;
+        margin-top: 50px;
         border: var(--border-width) solid var(--border-color);
     }
 
@@ -111,11 +114,13 @@ em {
         grid-column-end: span 1;
         font-size: 50px;
         font-weight: normal;
+        margin-top: 30px;
         border: var(--border-width) solid var(--border-color);
     }
 
     .lesson-description {
-        padding: 30px;
+        margin-top: 30px;
+        padding: 0 30px;
         font-size: 20px;
         font-weight: light;
         grid-column-start: 2;
@@ -125,6 +130,7 @@ em {
 
     .lesson-description li, .lesson-description a {
         font-weight: lighter;
+        margin-bottom: 10px;
     }
 
     .lesson-description a:hover {
