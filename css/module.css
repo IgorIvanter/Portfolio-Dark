@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Didact+Gothic&family=Lato:ital,wght@0,400;0,700;1,400;1,700&family=Source+Serif+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
+
+/* Importing DM-Sans, Abril Fatface, Lato, Didact Gothic, Source Serif Pro from Google Fonts */
+
+
+:root {
+    /* Set to none zero to see all borders */
+    --border-width: 0px;
+    --border-color: violet;
+
+
+    /* Color palette */
+
+    --violet: #a502e6;
+    --testing-black: rgb(29, 29, 29);
+    --red: rgb(146, 0, 59);
+    
+
+    --color1: #2e003e;
+    --color2: #3d2352;
+    --color3: #3d1e6d;
+    --color4: #8874a3;
+    --color5: #e4dcf1;
+
+    /* The maximum width after which the navigation bar stops stretching */
+
+    --navbar-max-width: 1280px;
+
+    /* The maximum width after which main stops stretching */
+
+    --main-max-width: 1000px;
+
+}
+
+
+input,
+textarea,
+button,
+select {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+
+/* Universal stuff for both mobile and desktop: */
+
+/* Resetting all the default browser styling */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Source Serif Pro', sans-serif;
+    font-weight: normal;
+    color: white;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+link {
+    text-decoration: none;
+    display: none;
+}
+
+body {
+    background-color: var(--testing-black);
+}
+
+ul {
+    list-style: none;
+}
+
+.text-center {
+    text-align: center;
+}
+
+em {
+    color: var(--violet);
+    font-style: italic;
+}
+
+@media (min-width: 990px) {
+    main {
+        display: grid;
+        grid-template-columns: 300px 1fr;
+        grid-template-rows: auto auto auto;
+        row-gap: 20px;
+        column-gap: 100px;
+        max-width: var(--main-max-width);
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: 72px;         /* 70px for the fixed and 2px for the border */
+        border: var(--border-width) solid var(--border-color);
+    }
+
+    .module-heading {
+        grid-column-start: 1;
+        grid-column-end: span 2;
+        grid-row-start: 1;
+        grid-row-end: span 1;
+        border: var(--border-width) solid var(--border-color);
+    }
+
+    .module-subheading {
+        grid-column-start: 1;
+        grid-column-end: span 2;
+        border: var(--border-width) solid var(--border-color);
+    }
+
+    .lesson {
+        grid-column-start: 1;
+        grid-column-end: span 1;
+        font-size: 50px;
+        font-weight: normal;
+        border: var(--border-width) solid var(--border-color);
+    }
+
+    .lesson-description {
+        padding: 30px;
+        font-size: 20px;
+        font-weight: light;
+        grid-column-start: 2;
+        grid-column-end: span 1;
+        border: var(--border-width) solid var(--border-color);
+    }
+
+    .lesson-description li, .lesson-description a {
+        font-weight: lighter;
+    }
+
+    .lesson-description a:hover {
+        text-decoration: underline;
+    }
+}
+
+@media (max-width: 990px) {
+    .module-heading {
+        grid-column-start: 1;
+        grid-column-end: span 2;
+        grid-row-start: 1;
+        grid-row-end: span 1;
+        border: var(--border-width) solid var(--border-color);
+    }
+
+    .module-subheading {
+        grid-column-start: 1;
+        grid-column-end: span 2;
+        border: var(--border-width) solid var(--border-color);
+    }
+
+    .lesson {
+        grid-column-start: 1;
+        grid-column-end: span 2;
+        font-size: 50px;
+        font-weight: normal;
+        border: var(--border-width) solid var(--border-color);
+    }
+
+    .lesson-description {
+        padding: 30px;
+        font-size: 20px;
+        font-weight: light;
+        grid-column-start: 1;
+        grid-column-end: span 2;
+        border: var(--border-width) solid var(--border-color);
+    }
+
+    .lesson-description li, .lesson-description a {
+        font-weight: lighter;
+    }
+
+    .lesson-description a:hover {
+        text-decoration: underline;
+    }
+}
