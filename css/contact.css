@@ -1,0 +1,71 @@
+:root {
+    /* Set to none zero to see all borders */
+    --border-width: 0px;
+    --border-color: violet;
+
+
+    /* Color palette */
+
+    --violet: #a502e6;
+    --testing-black: rgb(29, 29, 29);
+    --red: rgb(146, 0, 59);
+    
+
+    --color1: #2e003e;
+    --color2: #3d2352;
+    --color3: #3d1e6d;
+    --color4: #8874a3;
+    --color5: #e4dcf1;
+
+    /* The maximum width after which the navigation bar stops stretching */
+
+    --navbar-max-width: 1280px;
+
+    /* The maximum width after which main stops stretching */
+
+    --main-max-width: 1100px;
+
+}
+
+input, textarea {
+    background-color: var(--color2);
+    color: whiite;
+    border: none;
+    border-radius: 10px;
+    padding: 20px;
+    font-size: 18px;
+}
+
+textarea:focus {
+    outline-style: none;
+}
+
+.contact-form {
+    display: block;
+    width: fit-content;
+    margin: auto;
+    padding: 40px;
+    border-radius: 20px;
+    font-size: 21px;
+    background-color: #100720;
+    border: none;
+}
+
+.contact-form input {
+    padding: 20px;
+    font-size: 18px;
+    height: 3em;
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+}
+
+.contact-form input:focus {
+    outline-style: none;
+}
+
+.send-button {
+    width: 100%;
+    background-color: var(--violet);
+    border: none;
+}
