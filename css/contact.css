@@ -28,49 +28,90 @@
 
 }
 
-/* main {
-    display: flex;
-    justify-content: center;
-} */
+@media (min-width: 990px) {
+    .contact-form {
+        display: block;
+        width: 100%;
+        margin: auto;
+        padding: 40px;
+        border-radius: 20px;
+        font-size: 21px;
+        background-color: rgba(16, 7, 32, 1);
+        border: none;
+    }
 
-.contact-form {
-    display: block;
-    width: 100%;
-    margin: auto;
-    padding: 40px;
-    border-radius: 20px;
-    font-size: 21px;
-    background-color: rgba(16, 7, 32, 1);
-    border: none;
+    .contact-form input, .contact-form textarea {
+        padding: 20px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-size: 18px;
+        width: 100%;
+        border: none;
+        border-radius: 10px;
+        background-color: var(--input-background-color);
+    }
+
+    .contact-form input:focus, .contact-form textarea:focus {
+        outline-style: none;
+    }
+
+    .send-button {
+        width: 100%;
+        background-color: var(--input-background-color);
+        border: none;
+        border-radius: 10px;
+        font-size: 18px;
+        padding: 20px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        transition: 0.4s;
+    }
+
+    .send-button:hover {
+        opacity: 0.7;
+    }
 }
 
-.contact-form input, .contact-form textarea {
-    padding: 20px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    font-size: 18px;
-    width: 100%;
-    border: none;
-    border-radius: 10px;
-    background-color: var(--input-background-color);
-}
+@media (max-width: 990px) {
+    .contact-form {
+        display: block;
+        width: 96%;
+        margin: 100px auto;
+        padding: 40px;
+        border-radius: 20px;
+        font-size: 21px;
+        background-color: rgba(16, 7, 32, 1);
+        border: none;
+    }
 
-.contact-form input:focus, .contact-form textarea:focus {
-    outline-style: none;
-}
+    .contact-form input, .contact-form textarea {
+        padding: 20px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-size: 60px;
+        width: 100%;
+        border: none;
+        border-radius: 10px;
+        background-color: var(--input-background-color);
+    }
 
-.send-button {
-    width: 100%;
-    background-color: var(--input-background-color);
-    border: none;
-    border-radius: 10px;
-    font-size: 18px;
-    padding: 20px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    transition: 0.4s;
-}
+    .contact-form input:focus, .contact-form textarea:focus {
+        outline-style: none;
+    }
 
-.send-button:hover {
-    opacity: 0.7;
+    .send-button {
+        width: 100%;
+        background-color: var(--input-background-color);
+        border: none;
+        border-radius: 10px;
+        font-size: 70px;
+        padding: 20px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        transition: 0.2s;
+    }
+
+    .send-button:active {
+        opacity: 0.4;
+    }
 }
