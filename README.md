@@ -6,6 +6,8 @@ This is a free online guide on learning the basics of German. I purposefully did
 
 - More advanced CSS
 
+- Adding multiple CSS files to one page
+
 - Responsive design
 
 - Simple animations
