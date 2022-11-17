@@ -7,6 +7,12 @@ main p {
     margin: 30px 0;
 }
 
+main p ul, main p ol {
+    font-size: 21px;
+    font-weight: normal;
+    font-family: "Source Serif Pro", sans-serif;
+}
+
 .german {
     color: var(--violet);
     font-style: italic;
