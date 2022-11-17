@@ -144,4 +144,28 @@
     .translation::before {
         content: "~ ";
     }
+
+    .next-prev-container {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .next-prev-container.first, .next-prev-container.last {
+        justify-content: center;
+    }
+
+    .next-prev-container a {
+        font-family: "Source Serif Pro", sans-serif;
+        font-size: 50px;
+        margin: 15px;
+        font-weight: bold;
+        padding: 10px;
+        border-radius: 10px;
+        transition: 0.3s;
+    }
+
+    .next-prev-container a:active {
+        color: var(--violet);
+    }
 }
