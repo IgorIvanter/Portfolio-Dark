@@ -36,8 +36,7 @@
         padding: 40px;
         border-radius: 20px;
         font-size: 21px;
-        background-color: rgba(16, 7, 32, 1);
-        border: none;
+        background-color: var(--testing-black);
     }
 
     .contact-form input, .contact-form textarea {
@@ -47,8 +46,8 @@
         font-size: 18px;
         width: 100%;
         border: none;
-        border-radius: 10px;
-        background-color: var(--input-background-color);
+        border: 2px solid white;
+        background-color: var(--testing-black);
     }
 
     .contact-form input:focus, .contact-form textarea:focus {
@@ -59,40 +58,48 @@
         width: 100%;
         background-color: var(--input-background-color);
         border: none;
-        border-radius: 10px;
         font-size: 18px;
         padding: 20px;
         margin-top: 10px;
         margin-bottom: 10px;
-        transition: 0.4s;
+        transition: 0.15s;
     }
 
     .send-button:hover {
-        opacity: 0.7;
+        box-shadow: 5px 5px 10px black;
+        cursor: pointer;
+    }
+
+    .send-button:active {
+        box-shadow: none;
+        cursor: pointer;
     }
 }
 
 @media (max-width: 990px) {
     .contact-form {
         display: block;
-        width: 96%;
-        margin: 100px auto;
+        width: 100%;
+        margin: auto;
         padding: 40px;
         border-radius: 20px;
         font-size: 21px;
-        background-color: rgba(16, 7, 32, 1);
-        border: none;
+        background-color: var(--testing-black);
     }
 
     .contact-form input, .contact-form textarea {
         padding: 20px;
         margin-top: 10px;
         margin-bottom: 10px;
-        font-size: 60px;
+        font-size: 50px;
         width: 100%;
         border: none;
-        border-radius: 10px;
-        background-color: var(--input-background-color);
+        border: 2px solid white;
+        background-color: var(--testing-black);
+    }
+
+    .contact-form label {
+        font-size: 50px;
     }
 
     .contact-form input:focus, .contact-form textarea:focus {
@@ -103,15 +110,14 @@
         width: 100%;
         background-color: var(--input-background-color);
         border: none;
-        border-radius: 10px;
         font-size: 70px;
         padding: 20px;
         margin-top: 10px;
         margin-bottom: 10px;
-        transition: 0.2s;
+        transition: 0.1s;
     }
 
     .send-button:active {
-        opacity: 0.4;
+        box-shadow: 5px 5px 10px black;
     }
 }
